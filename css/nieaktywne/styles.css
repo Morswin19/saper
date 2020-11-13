@@ -1,0 +1,177 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.game {
+  background-color: #c0c0c0;
+  padding: 1.5rem;
+  max-width: 36.2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game__board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cell {
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.8rem;
+}
+
+.header__counter {
+  background-color: black;
+  color: #f80000;
+  padding: 0.5rem;
+  font-size: 3.2rem;
+  min-width: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__reset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__button {
+  margin: auto;
+  width: 4.8rem;
+  height: 4.8rem;
+  cursor: pointer;
+  outline: none;
+  background-color: #c0c0c0;
+}
+
+.panel__header {
+  text-align: center;
+  font-size: 2.6rem;
+}
+
+.panel__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  cursor: pointer;
+  font-size: 2.4rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content {
+  width: 50vw;
+  height: 50vh;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.modal__text {
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+.modal__button {
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+  border: 0.3rem solid black;
+  padding: 1rem 2rem;
+  font-size: 2.4rem;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.modal__button:hover {
+  background-color: #000;
+  color: white;
+  border: 0.3rem solid black;
+}
+
+.border {
+  border: 0.3rem solid;
+}
+
+.border--convex {
+  border-color: #808080 white white #808080;
+}
+
+.border--concave {
+  border-color: white #808080 #808080 white;
+}
+
+.hide {
+  visibility: hidden;
+}
+/*# sourceMappingURL=styles.css.map */

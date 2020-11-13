@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Super Saper kur...</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="game border border--concave">
+      <header class="header border border--convex">
+        <article class="header__counter" data-counter>
+          0
+        </article>
+        <button class="header__reset border border--concave" data-button-reset>
+          <svg class="header__button">
+            <use href="./assets/sprite.svg#neutral"></use>
+          </svg>
+        </button>
+        <article class="header__counter" data-timer>
+          0
+        </article>
+      </header>
+      <article class="game__board border border--convex" data-board></article>
+      <article class="game__panel border border--convex">
+        <header class="panel__header">
+          Select Difficulty
+        </header>
+        <section class="panel__buttons">
+          <button class="button border border--concave" data-button-easy>
+            EASY
+          </button>
+          <button class="button border border--concave" data-button-normal>
+            NORMAL
+          </button>
+          <button class="button border border--concave" data-button-expert>
+            EXPERT
+          </button>
+        </section>
+      </article>
+      <article class="modal hide" data-modal>
+        <section class="modal__content border border--concave">
+          <h2 class="modal__text" data-modal-header>You won!</h2>
+          <button class="modal__button" data-modal-button>Play again</button>
+        </section>
+      </article>
+    </main>
+    <script type="module" src="./js/Game.js"></script>
+  </body>
+</html>

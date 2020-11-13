@@ -1,0 +1,129 @@
+$primaryColor: #c0c0c0
+$primaryDark: #808080
+$alarmColor: #f80000
+$cellSize: 4rem
+$gamePadding: 1.5rem
+$borderWidth: 0.3rem
+$cellInRow: 8
+
+$gameMaxWidth: $cellSize * $cellInRow + 2 * ($gamePadding + $borderWidth) + 0.6
+
+*, *::after, *::before
+    padding: 0
+    margin: 0
+    box-sizing: inherit
+
+body
+    font-family: 'Ubuntu', sans-serif
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+.game
+    background-color: $primaryColor
+    padding: $gamePadding
+    max-width: $gameMaxWidth
+    margin-left: auto
+    margin-right: auto
+
+.game__board
+    display: flex
+    flex-wrap: wrap
+
+.cell
+    width: $cellSize
+    height: $cellSize
+    cursor: pointer
+
+.header
+    display: flex
+    justify-content: space-between
+    padding: 0.8rem
+
+.header__counter
+    background-color: black
+    color: $alarmColor
+    padding: 0.5rem
+    font-size: 3.2rem
+    min-width: 8rem
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+.header__reset
+    display: flex
+    // align-items: center
+    // justify-content: center
+
+.header__button
+    margin: auto
+    width: 4.8rem
+    height: 4.8rem
+    cursor: pointer
+    outline: none
+    background-color: $primaryColor
+
+.panel__header
+    text-align: center
+    font-size: 2.6rem
+
+.panel__buttons
+    display: flex
+
+.button
+    flex: 1
+    padding-top: 2.5rem
+    padding-bottom: 2.5rem
+    cursor: pointer
+    font-size: 2.4rem
+
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: rgba(0,0,0,0.5)
+
+.modal__content
+    width: 50vw
+    height: 50vh
+    background-color: white
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+
+.modal__text
+    font-size: 4.8rem
+    text-align: center
+
+.modal__button
+    cursor: pointer
+    background-color: transparent
+    color: black
+    border: 0.3rem solid black
+    padding: 1rem 2rem
+    font-size: 2.4rem
+    outline: none
+    transition: 0.2s
+    &:hover
+        background-color: #000
+        color: white
+        border: 0.3rem solid black
+
+.border
+    border: $borderWidth solid
+
+.border--convex
+    border-color: $primaryDark white white $primaryDark
+
+.border--concave
+    border-color: white $primaryDark $primaryDark white
+
+.hide
+    visibility: hidden
